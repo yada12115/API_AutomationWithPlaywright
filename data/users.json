@@ -1,0 +1,16 @@
+{
+  "validUser": {
+  "id": 151,
+  "username": "RamBola",
+  "firstName": "jay",
+  "lastName": "Dev",
+  "email": "dev123@gmail.com",
+  "password": "1234556",
+  "phone": "5474536221",
+  "userStatus": 0
+  },
+  "invalidUser": {
+    "name": "",
+    "email": "invalid-email"
+  }
+}
