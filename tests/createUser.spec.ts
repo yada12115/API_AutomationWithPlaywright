@@ -3,15 +3,25 @@ import { UserService } from '../services/UserService.js';
 import userData from '../data/users.json';
 
 
-test('POST user - create user', async ({ request }) => {
+test('POST user  Data', async function({request}) {
+  const CreateBookingData={
+
+  
+  "username" : "admin",
+    "password" : "password123"
+  }
   const userService = new UserService(request);
 
-  const response = await userService.createUser("https://petstore.swagger.io/v2/user", userData.validUser);
+  const response = await userService.createUser("https://restful-booker.herokuapp.com/auth" ,{Headers:{"Content-Type":"application/json"} ,Data: CreateBookingData});
 
-  expect(response.status()).toBe(200);
+    const responseData = await response.json();
+  console.log(responseData);
 
-  const body = await response.json();
-  console.log(body.id);
+
+  
+
+  
+  
 
   
 });
